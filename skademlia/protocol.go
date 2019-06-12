@@ -21,13 +21,15 @@ package skademlia
 
 import (
 	"bytes"
+	fmt "fmt"
+	"io"
+	"net"
+	"time"
+
 	"github.com/perlin-network/noise"
 	"github.com/perlin-network/noise/edwards25519"
 	"github.com/pkg/errors"
 	"golang.org/x/net/context"
-	"io"
-	"net"
-	"time"
 )
 
 const (
@@ -132,7 +134,8 @@ func (p Protocol) Client(info noise.Info, ctx context.Context, authority string,
 	}
 
 	if !addressMatches(id.Address(), conn.RemoteAddr().String()) {
-		err := errors.Errorf("connected to peer with addr %s, but their id writes addr %s", conn.RemoteAddr().String(), id.Address())
+		fmt.Printf("Address matches: %v", addressMatches(id.Address(), conn.RemoteAddr().String()))
+		err := errors.Errorf("connected to peer with addr %s, but their id is %s", conn.RemoteAddr().String(), id.Address())
 		if cerr := conn.Close(); cerr != nil {
 			err = errors.Wrap(cerr, err.Error())
 		}
