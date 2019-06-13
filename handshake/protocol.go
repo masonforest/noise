@@ -21,8 +21,8 @@ package handshake
 
 import (
 	"crypto"
-	"github.com/perlin-network/noise"
-	"github.com/perlin-network/noise/edwards25519"
+	"github.com/masonforest/noise"
+	"github.com/masonforest/noise/edwards25519"
 	"github.com/pkg/errors"
 	"golang.org/x/net/context"
 	"io"

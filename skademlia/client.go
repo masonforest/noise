@@ -22,7 +22,7 @@ package skademlia
 import (
 	"bytes"
 	"context"
-	"github.com/perlin-network/noise"
+	"github.com/masonforest/noise"
 	"github.com/phf/go-queue/queue"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/blake2b"

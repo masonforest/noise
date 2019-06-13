@@ -3,6 +3,7 @@ module github.com/masonforest/noise
 go 1.12
 
 require (
+  github.com/masonforest/noise/ciper cleanup-wip
 	github.com/gogo/protobuf v1.2.1
 	github.com/huin/goupnp v1.0.0
 	github.com/jackpal/go-nat-pmp v1.0.1

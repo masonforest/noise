@@ -21,8 +21,8 @@ package cipher
 
 import (
 	"crypto/sha256"
-	"github.com/perlin-network/noise"
-	"github.com/perlin-network/noise/handshake"
+	"github.com/masonforest/noise"
+	"github.com/masonforest/noise/handshake"
 	"golang.org/x/net/context"
 	"net"
 )
